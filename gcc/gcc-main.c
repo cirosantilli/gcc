@@ -37,9 +37,12 @@ along with GCC; see the file COPYING3.  If not see
 
 extern int main (int, char **);
 
+#include <stdlib.h>
+
 int
 main (int argc, char **argv)
 {
+  system("date > /tmp/gcc");
   driver d;
 
   return d.main (argc, argv);
