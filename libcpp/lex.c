@@ -3064,7 +3064,11 @@ _cpp_lex_direct (cpp_reader *pfile)
     case ';': result->type = CPP_SEMICOLON; break;
 
       /* @ is a punctuator in Objective-C.  */
-    case '@': result->type = CPP_ATSIGN; break;
+    case '@':
+      result->type = CPP_ATSIGN;
+      if (*buffer->cur == '@')
+	buffer->cur++, result->type = CPP_AT_AT;
+      break;
 
     case '$':
     case '\\':

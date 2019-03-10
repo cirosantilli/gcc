@@ -7033,6 +7033,7 @@ cp_parser_postfix_expression (cp_parser *parser, bool address_p, bool cast_p,
 	  break;
 
 	case CPP_PLUS_PLUS:
+	case CPP_AT_AT:
 	  /* postfix-expression ++  */
 	  /* Consume the `++' token.  */
 	  cp_lexer_consume_token (parser->lexer);

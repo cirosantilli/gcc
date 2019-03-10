@@ -103,6 +103,7 @@ struct _cpp_file;
   OP(SEMICOLON,		";")	/* structure */				\
   OP(ELLIPSIS,		"...")						\
   OP(PLUS_PLUS,		"++")	/* increment */				\
+  OP(AT_AT,		"@@")	/* increment */				\
   OP(MINUS_MINUS,	"--")						\
   OP(DEREF,		"->")	/* accessors */				\
   OP(DOT,		".")						\

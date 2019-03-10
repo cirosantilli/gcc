@@ -30,9 +30,12 @@ int main (int argc, char **argv);
    We do this in a separate file in order to allow the language front-end
    to define a different main(), if it so desires.  */
 
+#include <stdio.h>
+
 int
 main (int argc, char **argv)
 {
+  puts("hacked");
   toplev toplev (NULL, /* external_timer */
 		 true /* init_signals */);
 
