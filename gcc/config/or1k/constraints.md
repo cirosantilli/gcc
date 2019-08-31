@@ -24,6 +24,7 @@
 
 ; We use:
 ;  c - sibcall registers
+;  t - got address registers (excludes LR (r9) which is clobbered by set_got)
 ;  I - constant signed 16-bit
 ;  K - constant unsigned 16-bit
 ;  M - constant signed 16-bit shifted left 16-bits (l.movhi)
@@ -31,6 +32,9 @@
 
 (define_register_constraint "c" "SIBCALL_REGS"
   "Registers which can hold a sibling call address")
+
+(define_register_constraint "t" "GOT_REGS"
+  "Registers which can be used to store the Global Offset Table (GOT) address.")
 
 ;; Immediates
 (define_constraint "I"
